@@ -14,7 +14,14 @@ passport.use(
     },
     (accessToken, refreshToken, profile, done) => {
       // profile id comes from google
-      new User({ googleID: profile.id }).save();
+      User.findOne({ googleID: profile.id })
+        .then((existingUser) => {
+          if(existingUser) {
+
+          } else {
+            new User({ googleID: profile.id }).save();
+          }
+        })
     }
   )
 );
