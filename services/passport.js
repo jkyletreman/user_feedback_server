@@ -9,7 +9,7 @@ passport.serializeUser((user, done) => {
   done(null, user.id)
 });
 
-passport.deserialize((id, done) => {
+passport.deserializeUser((id, done) => {
   // mongoose query
   User.findById(id).then(user => {
     done(null, user)
