@@ -17,7 +17,7 @@ app.use(
     keys: [cookieKey]
   })
 );
-
+// pulls user id out of the cookie
 app.use(passport.initialize());
 app.use(passport.session());
 
