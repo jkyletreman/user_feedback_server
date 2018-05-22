@@ -1,11 +1,20 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
 export default class Header extends Component {
   render() {
     return (
       <div>
-        <h2>Header</h2>
+        <nav>
+          <div class="nav-wrapper">
+            <a className='left brand-logo'>Emaily</a>
+            <ul className='right'>
+              <li>
+                <a>Login With Google</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
       </div>
-    )
+    );
   }
 }
