@@ -5,7 +5,7 @@ export default class Header extends Component {
     return (
       <div>
         <nav>
-          <div class="nav-wrapper">
+          <div className="nav-wrapper">
             <a className='left brand-logo'>Emaily</a>
             <ul className='right'>
               <li>

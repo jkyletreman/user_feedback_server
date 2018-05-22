@@ -1,7 +1,7 @@
 import axios from "axios";
-import { fetchUser } from "./types";
+import { FETCH_USER } from "./types";
 
-const fetchUser = () => {
+export const fetchUser = () => {
   // action creator will return a function
   // when thunk sees a function returned, it will apply the dispatch
   return function(dispatch) {
