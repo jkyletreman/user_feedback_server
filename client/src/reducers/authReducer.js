@@ -1,5 +1,5 @@
 export default function(state = {}, action) {
-  console.log(`I am a action ${action}`)
+  console.log(action)
   switch(action.type) {
     default:
       return state;
