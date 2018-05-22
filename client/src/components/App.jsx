@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Router } from "react-router-dom";
+import { BrowserRouter, Route } from "react-router-dom";
 
 const Header = () => <h2>Header</h2>;
 const Dashboard = () => <h2>Dashboard</h2>;
