@@ -8,7 +8,15 @@ module.exports = app => {
     })
   );
 
-  app.get("/auth/google/callback", passport.authenticate("google"));
+  app.get(
+    "/auth/google/callback",
+    passport.authenticate("google"),
+    //whoever comes through the authentication route, this is where we redirect them into the application.
+    //this will be to our dashboard of surveys
+    (req, res) => {
+      res.redirect('/surveys');
+    }
+  );
 
   app.get("/api/logout", (req, res) => {
     // .logout is authomatically attached to req by passport
