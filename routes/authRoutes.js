@@ -14,6 +14,7 @@ module.exports = app => {
     //whoever comes through the authentication route, this is where we redirect them into the application.
     //this will be to our dashboard of surveys
     (req, res) => {
+      // this will direct them to the dashboard component, combining server side routing and client side
       res.redirect('/surveys');
     }
   );
