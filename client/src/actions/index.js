@@ -10,3 +10,13 @@ export const fetchUser = () => async dispatch => {
     payload: res.data
   });
 };
+
+// stripe api
+export const handleToken = token => async dispatch => {
+  const res = await axois.post('/api/stripe', token);
+  // getting the same user model, so we can dispatch the same action creator
+  dispatch({
+    type: FETCH_USER,
+    payload: res.data
+  });
+};
